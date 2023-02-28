@@ -1,5 +1,5 @@
-# Your Project's Title...
-Your project's description...
+# Dick's Sporting Goods demo
+https://www.dickssportinggoods.com/s/dsg-brand-clothing-gear
 
 ## Environments
 - Preview: https://main--{repo}--{owner}.hlx.page/
