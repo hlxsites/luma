@@ -1,1 +1,56 @@
 /* below the fold CSS goes here */
+@font-face {
+    font-family: 'DSG Sans';
+    font-display: swap;
+    src: url('/styles/fonts/DSGSans-Black.woff') format('woff');
+    font-style:   normal;
+    font-weight:  700;
+}
+
+@font-face {
+    font-family: 'DSG Sans';
+    font-display: swap;
+    src: url('/styles/fonts/DSGSans-Medium.woff') format('woff');
+    font-style:   normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'DSG Sans Black';
+    font-display: swap;
+    src: url('/styles/fonts/DSGSans-Black.woff') format('woff');
+    font-style:   normal;
+    font-weight:  400;
+}
+
+@font-face {
+    font-family: 'DSG Sans Bold';
+    font-display: swap;
+    src: url('/styles/fonts/DSGSans-Bold.woff') format('woff');
+    font-style:   normal;
+    font-weight:  700;
+}
+
+@font-face {
+    font-family: Archivo;
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url('/styles/fonts/Archivo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Archivo;
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    src: url('/styles/fonts/Archivo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Archivo Black';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+src: url('/styles/fonts/Archivo-Black.ttf') format('truetype');
+}
