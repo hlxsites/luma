@@ -21,7 +21,8 @@
   --text-color: #191f1c;
 
   /* fonts */
-  --body-font-family: 'Archivo', arial, sans-serif;--font-family-secondary: 'DSG Sans Black', sans-serif;
+  --body-font-family: 'Archivo', arial, sans-serif;
+   --font-family-secondary: 'DSG Sans Black', sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 

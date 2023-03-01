@@ -1,0 +1,30 @@
+/* parallax block */
+main .parallax-container {
+    padding: 0;
+}
+
+main .parallax-container .parallax-wrapper {
+    max-width: 100%;
+}
+
+main .parallax-background {
+    overflow: hidden;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+}
+
+main .parallax-background > div {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding: 0 20px;
+    text-align: center;
+    width: 550px;
+    float: right;
+}
+
+main .parallax-background h2 {
+    font-family: var(--font-family-secondary);
+    font-size: var(--heading-font-size-xxl);
+}
