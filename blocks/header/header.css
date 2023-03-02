@@ -14,9 +14,8 @@ header nav {
   align-items: center;
   gap: 0 2em;
   margin: auto;
-  max-width: 1600px;
+  max-width: 100%;
   height: var(--nav-height);
-  padding: 0 1rem;
   font-family: var(--body-font-family);
 }
 
@@ -28,12 +27,6 @@ header nav[aria-expanded=true] {
   'ubermenu ubermenu' 1fr;
   overflow-y: auto;
   min-height: 100vh;
-}
-
-@media (min-width: 600px) {
-  header nav {
-    padding: 0 2rem;
-  }
 }
 
 @media (min-width: 900px) {
@@ -210,6 +203,8 @@ header nav .nav-sections ul > li > ul > li {
     display: flex;
     height: 30px;
     justify-content: flex-end;
+    max-width: 1600px;
+    margin: 0 auto;
   }
 
   header nav .nav-sections .nav-drop {
@@ -288,6 +283,8 @@ header nav .nav-tools {
   grid-area: tools;
   display: flex;
   justify-content: flex-end;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 header nav .nav-tools ul {
@@ -311,11 +308,12 @@ header nav .nav-ubermenu {
   display: flex;
   justify-content: space-around;
   padding: 18px 0;
-  margin: 10px 0;
+  margin: 10px auto;
   border-top: 1px solid;
   border-bottom: 1px solid;
   border-color: var(--overlay-background-color);
   font-size: var(--body-font-size-xs);
+  max-width: 1600px;
 }
 
 header nav .nav-ubermenu a {

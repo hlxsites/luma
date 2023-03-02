@@ -3,16 +3,14 @@ main .parallax-container {
     padding: 0;
 }
 
-main .parallax-container .parallax-wrapper {
-    max-width: 100%;
-}
-
 main .parallax-background {
     overflow: hidden;
-    background-size: cover;
+    background-size: 160%;
     width: 100%;
     height: auto;
     padding: 20px 0;
+    background-position-x: center;
+    background-position-y: -200px;
 }
 
 main .parallax-background > div {
@@ -27,4 +25,16 @@ main .parallax-background > div {
 main .parallax-background h2 {
     font-family: var(--font-family-secondary);
     font-size: var(--heading-font-size-xxl);
+}
+
+@media (min-width: 1280px) {
+    main .parallax-background {
+        overflow: hidden;
+        background-size: 140%;
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+        background-position-x: center;
+        background-position-y: -200px;
+    }
 }

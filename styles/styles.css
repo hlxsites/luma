@@ -268,7 +268,7 @@ main .section.title {
   padding: 25px;
 }
 
-.store-links a:link {
+.store-links p a:link {
   font-size: var(--body-font-size-xxs);
   align-items: normal;
   text-decoration: none;
