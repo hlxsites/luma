@@ -3,8 +3,16 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.cards h2 {
+    font-size: var(--heading-font-size-l);
+}
+
+.services-3 .cards > ul {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 .cards > ul > li {
@@ -26,6 +34,22 @@
 
 .cards > ul > li img {
     width: 100%;
-    aspect-ratio: 4 / 3;
     object-fit: cover;
+}
+
+.circles .cards-card-body a:link, .circles .button-container a:link {
+    border: none;
+    text-transform: unset;
+    padding: unset;
+    font-weight: normal;
+    letter-spacing: unset;
+}
+
+.circles .cards-wrapper {
+    padding-top: 50px;
+}
+
+.circles h3 {
+    font-weight: normal;
+    color: #006554;
 }

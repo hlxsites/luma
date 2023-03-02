@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .columns > div {
     display: flex;
     flex-direction: column;
@@ -7,19 +8,116 @@
     width: 100%;
 }
 
+.hittrax h2 {
+    margin: 0;
+}
+
+.icons-text .columns-4-cols > div div {
+    margin-right: 20px;
+    border-right: 1px solid;
+    border-color: var(--overlay-background-color);
+}
+
+.icons-text .columns-4-cols > div > div:last-child {
+    border-right: 0;
+}
+
+.icons-text, .icons-text a:link {
+    font-size: var(--body-font-size-xxs);
+    font-weight: normal;
+}
+
+.icons-text strong {
+    font-size: var(--body-font-size-s);
+    font-weight: 700;
+}
+
+.icons-text ul {
+    list-style-type: none;
+    width: 40px;
+    height: 75px;
+    float: left;
+    padding-inline-start: 0;
+    padding-top: 10px;
+}
+
+.half-dark .columns > div {
+    background-color: var(--highlight-background-color);
+}
+
+.hittrax .columns > div div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    max-width: 60%;
+    overflow: hidden;
+    margin-right: unset;
+}
+
+.hittrax .columns > div div:nth-child(2) picture img{
+    max-width: unset;
+    height: 500px;
+    width: 980px;
+}
+
+.hittrax .columns > div > div:nth-child(1) {
+    flex: 1;
+    margin-right: 32px;
+}
+
+.half-dark h2 {
+    font-size: var(--heading-font-size-l);
+}
+
+.half-dark .columns > div div:nth-child(1) {
+    padding: 0 20px;
+}
+
+.half-dark .columns > div div:nth-child(1) ul {
+    list-style-type: none;
+    width: 250px;
+    float: right;
+}
+
+.half-dark .columns > div div:nth-child(2) {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding: 0 20px 0 85px;
+}
+
+.half-dark .columns > div div p, .half-dark .columns > div div ul li {
+    font-size: var(--body-font-size-xxs);
+}
+
+.half-dark .columns > div div p strong, .half-dark .columns > div div ul strong {
+    font-size: var(--body-font-size-s);
+}
+
+.half-dark .columns > div div:nth-child(2) p a {
+color:  var(--background-color);
+}
+
+.center {
+    text-align: center;
+}
+
+.columns-4-cols a:link {
+    border: none;
+    text-transform: unset;
+    padding: unset;
+    font-weight: normal;
+    letter-spacing: unset;
+    text-decoration: underline;
+}
+
 @media (min-width: 900px) {
     .columns > div {
         display: flex;
-        align-items: center;
         flex-direction: unset;
     }
 
     .columns > div > div {
         flex: 1;
-        margin-left: 32px;
     }
 
-    .columns > div > div:first-of-type {
-        margin-left: unset;
-    }
 }
