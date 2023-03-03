@@ -1,3 +1,8 @@
+.cards-container h3 {
+    font-weight: normal;
+    color: var(--ticker-color);
+}
+
 .cards > ul {
     list-style: none;
     margin: 0;
@@ -8,12 +13,7 @@
 }
 
 .cards h2 {
-    font-size: var(--heading-font-size-l);
-}
-
-.cards > ul > li {
-    border: 1px solid var(--highlight-background-color);
-    background-color: var(--background-color)
+    font-size: var(--heading-font-size-xl);
 }
 
 .resources > ul {
@@ -41,11 +41,78 @@
     margin-top: 0;
 }
 
-.circles .cards-card-image img {
-   transition: transform .2s ease-in-out;
+/* 3-d stuff */
+.services-3 li {
+    height: 500px;
+    transform-style: preserve-3d;
+    perspective: 800px;
 }
 
-.circles .cards-card-image:hover img {
+.services-3 .cards-card-image, .services-3 .cards-card-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+    margin: unset;
+    padding: 16px;
+}
+
+.services-3 .cards-card-image picture img, .services-3 .cards-card-body picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+   filter: grayscale(20%) brightness(70%);
+}
+
+.services-3 .cards-card-image {
+    /* this is just in case there's no image covering */
+    background-color: var(--ticker-color);
+}
+
+.services-3 .cards-card-body {
+    background-color: var(--text-color);
+    background-image: linear-gradient(-45deg, var(--ticker-color), var(--text-color));
+    transform: rotateY(180deg);
+    padding: 40px;
+}
+
+.services-3 li:hover .cards-card-image {
+    transform: rotateY(-180deg);
+}
+
+.services-3 li:hover .cards-card-body {
+    transform: rotateY(0deg);
+}
+
+.services-3 .cards-card-body p, .services-3 .cards-card-image h2 {
+    color: var(--background-color);
+    text-align: center;
+    transform: translateZ(100px);
+}
+
+.services-3 .cards-card-body a:link, .services-3 .cards-card-body a:visited {
+    color: var(--background-color);
+    font-weight: 700;
+}
+
+.circles .cards-card-image picture img {
+    transition: transform .2s ease-in-out;
+}
+
+.circles .cards-card-image:hover picture img {
     transform: scale(1.1) rotate(10deg);
 }
 
