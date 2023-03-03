@@ -27,6 +27,29 @@ function buildHeroBlock(main) {
   }
 }
 
+// if an image has a soft return with link under it
+function decorateImageLink(block) {
+  [...block.querySelectorAll('picture + br + a')]
+    .filter((a) => a.href === a.textContent)
+    .forEach((a) => {
+      const picture = a.previousElementSibling.previousElementSibling;
+      picture.remove();
+      a.previousElementSibling.remove();
+      const imageLink = a.parentElement.nextElementSibling;
+      if (imageLink.childElementCount === 1 && imageLink.firstElementChild.nodeName === 'A') {
+        const figure = document.createElement('figure');
+        figure.append(picture);
+        const caption = document.createElement('figcaption');
+        caption.innerHTML = imageLink.firstElementChild.innerHTML;
+        figure.append(caption);
+        a.innerHTML = figure.outerHTML;
+        imageLink.remove();
+      } else {
+        a.innerHTML = picture.outerHTML;
+      }
+    });
+}
+
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -34,6 +57,7 @@ function buildHeroBlock(main) {
 function buildAutoBlocks(main) {
   try {
     buildHeroBlock(main);
+    decorateImageLink(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
