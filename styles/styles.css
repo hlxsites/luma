@@ -19,6 +19,7 @@
   --overlay-background-color: #eaebeb;
   --highlight-background-color: #f9f9f9;
   --text-color: #191f1c;
+   --text-color-light: #797979;
 
   /* fonts */
   --body-font-family: 'Archivo', arial, sans-serif;
@@ -78,6 +79,7 @@ h1 {
   font-family: var(--body-font-family);
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 h2 {
@@ -255,17 +257,32 @@ main .section.highlight {
   background-color: var(--highlight-background-color);
 }
 
+.section.title {
+  padding: 25px;
+}
+
+.title ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.title li {
+  padding: 0 10px;
+  border-right: 1px solid var(--text-color-light);
+}
+
+.title li, .title a {
+  font-size: 11px;
+  color: var(--text-color-light);
+}
+
+.title li:last-child {
+  border-right: none;
+}
+
 p > a:link {
   text-decoration: underline;
-}
-
-main .title p, main .title a {
-  font-size: 11px;
-  color: #666;
-}
-
-main .section.title {
-  padding: 25px;
 }
 
 .store-links p a:link {

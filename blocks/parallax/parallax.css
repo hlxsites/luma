@@ -5,7 +5,8 @@ main .parallax-container {
 
 main .parallax-background {
     overflow: hidden;
-    background-size: 160%;
+    background-color: var(--ticker-color);
+    background-size: 100%;
     width: 100%;
     height: auto;
     padding: 20px 0;
@@ -30,7 +31,7 @@ main .parallax-background h2 {
 @media (min-width: 1280px) {
     main .parallax-background {
         overflow: hidden;
-        background-size: 140%;
+        background-size: 100%;
         width: 100%;
         height: auto;
         padding: 20px 0;
