@@ -1,6 +1,11 @@
 .cards-container h3 {
     font-weight: normal;
     color: var(--ticker-color);
+    text-align: center;
+}
+
+.cards-container p {
+    text-align: center;
 }
 
 .cards > ul {
@@ -16,17 +21,13 @@
     font-size: var(--heading-font-size-xl);
 }
 
-.resources > ul {
+.resources ul {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 .resources .cards-card-image, .resources .cards-card-image a:link, .resources .cards-card-image a:visited {
     background-color: #006554;
     color: white;
-}
-
-.services-3 .cards > ul {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 .cards .cards-card-body {
@@ -42,6 +43,10 @@
 }
 
 /* 3-d stuff */
+.services-3 ul {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
 .services-3 li {
     height: 500px;
     transform-style: preserve-3d;
@@ -66,7 +71,7 @@
     padding: 16px;
 }
 
-.services-3 .cards-card-image picture img, .services-3 .cards-card-body picture img {
+.services-3 .cards-card-image img, .services-3 .cards-card-body img {
     position: absolute;
     top: 0;
     left: 0;
@@ -108,11 +113,11 @@
     font-weight: 700;
 }
 
-.circles .cards-card-image picture img {
+.circles .cards-card-image img {
     transition: transform .2s ease-in-out;
 }
 
-.circles .cards-card-image:hover picture img {
+.circles .cards-card-image:hover img {
     transform: scale(1.1) rotate(10deg);
 }
 
