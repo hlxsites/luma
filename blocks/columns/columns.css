@@ -1,5 +1,5 @@
 /* stylelint-disable no-descending-specificity */
-.section.columns-container {
+main .columns-container {
     padding-bottom: 0;
     border-bottom: solid 1px #d8d8d8;
 }
