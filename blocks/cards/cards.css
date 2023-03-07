@@ -21,10 +21,6 @@
     font-size: var(--heading-font-size-xl);
 }
 
-.resources ul {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-}
-
 .resources .cards-card-image, .resources .cards-card-image a:link, .resources .cards-card-image a:visited {
     background-color: var(--overlay-background-color);
     text-align: center;
@@ -94,6 +90,10 @@
     padding: 40px;
 }
 
+.resources .cards-card-image {
+    padding: 10px;
+}
+
 .services-3 li:hover .cards-card-image {
     transform: rotateY(-180deg);
 }
@@ -129,8 +129,16 @@
     padding-top: 10px;
 }
 
+.resources {
+    padding-top: 40px;
+}
+
+.resources ul {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
 .resources li {
-    max-height: 220px;
+    height: 240px;
     overflow-y: hidden;
 }
 
@@ -166,14 +174,14 @@ Can be px or %, but watch for scrollbars appearing when x is over 200%.
 
 .resources li:hover .cards-card-image:nth-child(2) > picture:first-of-type img {
     opacity: 1;
-    transform: translate3d(80%, -10%, 0) scale(1) rotate(0deg);
+    transform: translate3d(80%, -20%, 0) scale(1) rotate(0deg);
     pointer-events: none;
     transition: transform 400ms 200ms ease, opacity 200ms 100ms ease;
 }
 
 .resources li:hover .cards-card-image:nth-child(2) > picture:last-of-type img {
     opacity: 1;
-    transform: translate3d(210%, 0, 0) scale(.9) rotate(20deg);
+    transform: translate3d(210%, -10%, 0) scale(.9) rotate(20deg);
     pointer-events: none;
     transition: transform 800ms 200ms ease, opacity 200ms 400ms ease;
 }
