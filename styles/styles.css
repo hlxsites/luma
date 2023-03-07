@@ -19,7 +19,6 @@
   --overlay-background-color: #eaebeb;
   --highlight-background-color: #f9f9f9;
   --text-color: #191f1c;
-   --text-color-light: #797979;
 
   /* fonts */
   --body-font-family: 'Archivo', arial, sans-serif;
@@ -269,12 +268,12 @@ main .section.highlight {
 
 .title li {
   padding: 0 10px;
-  border-right: 1px solid var(--text-color-light);
+  border-right: 1px solid var(--text-color);
 }
 
 .title li, .title a {
   font-size: 11px;
-  color: var(--text-color-light);
+  color: var(--text-color);
 }
 
 .title li:last-child {
