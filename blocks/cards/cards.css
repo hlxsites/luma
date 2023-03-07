@@ -26,8 +26,8 @@
 }
 
 .resources .cards-card-image, .resources .cards-card-image a:link, .resources .cards-card-image a:visited {
-    background-color: #006554;
-    color: white;
+    background-color: var(--overlay-background-color);
+    text-align: center;
 }
 
 .cards .cards-card-body {
@@ -127,4 +127,53 @@
 
 .circles figcaption {
     padding-top: 10px;
+}
+
+.resources li {
+    max-height: 220px;
+    overflow-y: hidden;
+}
+
+/* translate 3d x, y value determines horizontal travel distance.
+Can be px or %, but watch for scrollbars appearing when x is over 200%.
+ - Need to have 2 images on each column or placement gets weird on singletons */
+
+.resources li .cards-card-image:nth-child(2) picture:first-of-type img {
+    position: relative;
+    display: block;
+    left: -100px;
+    top: -100px;
+    z-index: 5;
+    width: 30%;
+    transform: translate3d(0, 0, 0) scale(0.3) rotate(0deg);
+    opacity: 0;
+    pointer-events: auto;
+    transition: transform 400ms 200ms ease, opacity 400ms 200ms ease;
+}
+
+.resources li .cards-card-image:nth-child(2) picture:last-of-type img {
+    position: relative;
+    display: block;
+    left: -80px;
+    top: -350px;
+    z-index: 4;
+    width: 35%;
+    transform: translate3d(0, 0, 0) scale(0.4) rotate(0deg);
+    opacity: 0;
+    pointer-events: auto;
+    transition: transform 400ms 200ms ease, opacity 400ms 200ms ease;
+}
+
+.resources li:hover .cards-card-image:nth-child(2) > picture:first-of-type img {
+    opacity: 1;
+    transform: translate3d(80%, -10%, 0) scale(1) rotate(0deg);
+    pointer-events: none;
+    transition: transform 400ms 200ms ease, opacity 200ms 100ms ease;
+}
+
+.resources li:hover .cards-card-image:nth-child(2) > picture:last-of-type img {
+    opacity: 1;
+    transform: translate3d(210%, 0, 0) scale(.9) rotate(20deg);
+    pointer-events: none;
+    transition: transform 800ms 200ms ease, opacity 200ms 400ms ease;
 }
