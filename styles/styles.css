@@ -283,9 +283,3 @@ main .section.highlight {
 p > a:link {
   text-decoration: underline;
 }
-
-.store-links p a:link {
-  font-size: var(--body-font-size-xxs);
-  align-items: normal;
-  text-decoration: none;
-}

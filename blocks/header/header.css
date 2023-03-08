@@ -285,17 +285,31 @@ header nav .nav-tools {
   justify-content: flex-end;
   max-width: 1600px;
   margin: 0 auto;
+  padding-right: 20px;
 }
 
 header nav .nav-tools ul {
   list-style-type: none;
   font-size: var(--body-font-size-xxs);
+  display: flex;
+}
+
+header nav .nav-tools ul .icon svg {
+  padding-right: 10px;
+  padding-top: 4px;
 }
 
 header nav .nav-tools ul:nth-child(2) {
-  flex:2;
+  flex: 2;
+}
+
+header nav .nav-tools ul:nth-child(2) > li {
   border-radius: 30px;
-  border: 1px solid #999;
+  border: 1px solid var(--overlay-background-color);
+  background-color: var(--highlight-background-color);
+  margin-top: 7px;
+  height: 45px;
+  width: 100%;
 }
 
 header nav .nav-tools ul strong {

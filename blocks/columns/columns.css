@@ -17,13 +17,21 @@ main .columns-container {
     margin: 0;
 }
 
-.icons-text .columns-4-cols > div div {
+.store-links {
+    padding-bottom: 40px;
+}
+
+.icons-text {
+    margin-bottom: 15px;
+}
+
+.icons-text > div div {
     margin-right: 20px;
     border-right: 1px solid;
     border-color: var(--overlay-background-color);
 }
 
-.icons-text .columns-4-cols > div > div:last-child {
+.icons-text > div > div:last-child {
     border-right: 0;
 }
 
@@ -74,8 +82,10 @@ main .columns-container {
     font-size: var(--heading-font-size-l);
 }
 
-.columns.half-dark .icon {
-    text-align: center;
+.columns.half-dark p span.icon {
+    display: block;
+    float: left;
+    width: 45px;
 }
 
 .columns.half-dark  > div div:nth-child(1) {
@@ -117,6 +127,12 @@ main .columns-container {
     color:  var(--background-color);
 }
 
+.store-links p a:link {
+    font-size: var(--body-font-size-xxs);
+    align-items: normal;
+    text-decoration: none;
+}
+
 .center {
     text-align: center;
 }
@@ -144,4 +160,7 @@ main .columns-container {
         max-width: 60%;
     }
 
+    .store-links {
+        padding-left: 60px;
+    }
 }
