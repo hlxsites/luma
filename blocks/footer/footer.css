@@ -1,5 +1,5 @@
 footer {
-  padding: 2rem;
+  padding: 20px;
   background-color: var(--overlay-background-color);
   font-size: var(--body-font-size-xxs);
 }
@@ -16,6 +16,22 @@ footer .footer p {
 
 footer .footer ul {
   list-style-type: none;
-  display: flex;
-  justify-content: space-between;
+}
+
+footer .footer li {
+width: 85%;
+}
+
+
+
+@media (min-width: 900px) {
+  footer {
+    padding: 2rem;
+  }
+
+  footer .footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
 }

@@ -17,17 +17,12 @@ main .columns-container {
     margin: 0;
 }
 
-.store-links {
-    padding-bottom: 40px;
-}
-
 .icons-text {
     margin-bottom: 15px;
 }
 
 .icons-text > div div {
-    margin-right: 20px;
-    border-right: 1px solid;
+    border-bottom: 1px solid;
     border-color: var(--overlay-background-color);
 }
 
@@ -69,13 +64,10 @@ main .columns-container {
 
 .columns.hittrax > div div:nth-child(2) picture img{
     max-width: unset;
-    height: 500px;
-    width: 980px;
 }
 
 .columns.hittrax > div > div:nth-child(1) {
     flex: 1;
-    margin-right: 32px;
 }
 
 .columns.half-dark h2 {
@@ -89,7 +81,7 @@ main .columns-container {
 }
 
 .columns.half-dark  > div div:nth-child(1) {
-    padding: 0 20px;
+    padding: 0 20px 20px;
 }
 
 .columns.half-dark  > div div:nth-child(1) ul {
@@ -146,21 +138,60 @@ main .columns-container {
     text-decoration: underline;
 }
 
+.columns.hittrax > div {
+    flex-direction: column-reverse;
+}
+
+.columns.hittrax .button-container a {
+    width: 100%;
+}
+
+.store-links {
+   padding-bottom: 40px;
+   text-align: center;
+}
+
 @media (min-width: 900px) {
     .columns > div {
         display: flex;
         flex-direction: unset;
     }
 
+    .columns.hittrax > div {
+        flex-direction: row;
+    }
+
+    .columns.hittrax .button-container a {
+        width: unset;
+    }
+
     .columns > div > div {
         flex: 1;
+    }
+
+    .columns.hittrax > div > div:nth-child(1) {
+        margin-right: 32px;
     }
 
     .columns.hittrax > div div:nth-child(2) {
         max-width: 60%;
     }
 
+    .columns.hittrax > div div:nth-child(2) picture img{
+        max-width: unset;
+        height: 500px;
+        width: 980px;
+    }
+
+    .icons-text > div div {
+        margin-right: 20px;
+        border-right: 1px solid;
+        border-bottom: 0;
+        border-color: var(--overlay-background-color);
+    }
+
     .store-links {
         padding-left: 60px;
+        text-align: left;
     }
 }

@@ -83,7 +83,7 @@ header nav .nav-sections ul strong {
 header nav .nav-tools {
   grid-area: tools;
   display: flex;
-  padding: 15px 0;
+  padding: 14px 0;
   margin: 0 auto;
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -261,6 +261,7 @@ header nav .nav-brand ul > li > ul > li {
     display: flex;
     height: 30px;
     justify-content: flex-end;
+    width: unset;
     max-width: 1600px;
     margin: 0 auto;
   }

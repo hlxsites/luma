@@ -17,6 +17,15 @@
     grid-gap: 30px;
 }
 
+.cards.circles > ul {
+    grid-template-columns: repeat(auto-fill, minmax(170px, .2fr));
+    grid-gap: 2px;
+}
+
+.cards.circles figure {
+   margin-inline: 10px;
+}
+
 .cards h2 {
     font-size: var(--heading-font-size-xl);
 }
@@ -39,10 +48,6 @@
 }
 
 /* 3-d stuff */
-.services-3 ul {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-}
-
 .services-3 li {
     height: 500px;
     transform-style: preserve-3d;
@@ -133,10 +138,6 @@
     padding-top: 40px;
 }
 
-.resources ul {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-}
-
 .resources li {
     height: 240px;
     overflow-y: hidden;
@@ -184,4 +185,23 @@ Can be px or %, but watch for scrollbars appearing when x is over 200%.
     transform: translate3d(210%, -10%, 0) scale(.9) rotate(20deg);
     pointer-events: none;
     transition: transform 800ms 200ms ease, opacity 200ms 400ms ease;
+}
+
+@media (min-width: 900px) {
+    .services-3 ul {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+
+    .resources ul {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+
+    .cards.circles > ul {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 30px;
+    }
+
+    .cards.circles figure {
+        margin-inline: unset;
+    }
 }

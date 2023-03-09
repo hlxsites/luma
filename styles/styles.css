@@ -184,7 +184,7 @@ main input:hover {
 }
 
 main .section {
-  padding: 64px 16px;
+  padding: 50px 16px;
 }
 
 main pre {
@@ -227,7 +227,7 @@ main img {
 
 @media (min-width: 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 50px 32px;
   }
 }
 
@@ -257,13 +257,14 @@ main .section.highlight {
 }
 
 .section.title {
-  padding: 25px;
+  padding: 0 20px 20px;
 }
 
 .title ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 .title li {
