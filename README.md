@@ -19,6 +19,10 @@ npm i
 npm tst
 ```
 
+## Authoring tips
+- To link an icon, put the linked URL right after :icon:
+- To link a picture, do a soft return (shift + enter) before putting the linked URL.
+
 ## Local development
 
 1. Create a new repository based on the `helix-project-boilerplate` template and add a mountpoint in the `fstab.yaml`
