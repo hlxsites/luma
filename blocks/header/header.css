@@ -331,4 +331,9 @@ header nav .nav-brand ul > li > ul > li {
   header nav .nav-brand > ul > li > ul > li {
     padding: 8px 0;
   }
+
+  .icon-search2 {
+    display: inline-flex;
+    padding: 12px;
+    }
 }

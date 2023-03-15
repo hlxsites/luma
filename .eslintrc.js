@@ -18,5 +18,11 @@ module.exports = {
     'import/extensions': ['error', {
       js: 'always',
     }],
+    'editorconfig/charset': 'error',
+    'editorconfig/eol-last': 'error',
+    'editorconfig/indent': 'error',
+    'editorconfig/linebreak-style': 'error',
+    'editorconfig/no-trailing-spaces': 'error',
   },
+  plugins: ['editorconfig'],
 };
