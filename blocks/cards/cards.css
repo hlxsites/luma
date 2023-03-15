@@ -28,6 +28,7 @@
 
 .cards.circles figure {
    margin-inline: 10px;
+    height: 200px;
 }
 
 .cards h2 {
