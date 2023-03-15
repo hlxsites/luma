@@ -44,10 +44,6 @@ main .parallax-background p {
         width: 550px;
         float: right;
         }
-
-    main .parallax-background p {
-        margin: 15px 0;
-        }
     }
 
 @media (min-width: 1280px) {

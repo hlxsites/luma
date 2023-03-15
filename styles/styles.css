@@ -43,7 +43,7 @@
   --heading-font-size-xs: 18px;
 
   /* nav height */
-  --nav-height: 250px;
+  --nav-height: 200px;
 
 }
 
@@ -62,7 +62,7 @@ body.appear {
 }
 
 header {
-  height: var(--nav-height);
+  height: calc(var(--nav-height) + 25px);
 }
 
 h1, h2, h3,
