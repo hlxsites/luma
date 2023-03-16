@@ -22,7 +22,8 @@
     }
 
 .cards.circles > ul {
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(170px, 1fr));
     grid-gap: 2px;
 }
 
@@ -30,6 +31,11 @@
    margin-inline: 10px;
     height: 200px;
 }
+
+.cards.circles img {
+    height: 170px;
+    width: 170px;
+    }
 
 .cards h2 {
     font-size: var(--heading-font-size-xl);
@@ -153,6 +159,11 @@
     overflow-y: hidden;
 }
 
+.resources li .cards-card-image:nth-child(1) img {
+    height: 176px;
+    width: 176px;
+    }
+
 /* translate 3d x, y value determines horizontal travel distance.
 Can be px or %, but watch for scrollbars appearing when x is over 200%.
  - Need to have 2 images on each column or placement gets weird on singletons */
@@ -168,6 +179,7 @@ Can be px or %, but watch for scrollbars appearing when x is over 200%.
     opacity: 0;
     pointer-events: auto;
     transition: transform 400ms 200ms ease, opacity 400ms 200ms ease;
+    height: 0;
 }
 
 .resources li .cards-card-image:nth-child(2) picture:last-of-type img {
@@ -181,9 +193,11 @@ Can be px or %, but watch for scrollbars appearing when x is over 200%.
     opacity: 0;
     pointer-events: auto;
     transition: transform 400ms 200ms ease, opacity 400ms 200ms ease;
+    height: 0;
 }
 
 .resources li:hover .cards-card-image:nth-child(2) > picture:first-of-type img {
+    height: unset;
     opacity: 1;
     transform: translate3d(80%, -20%, 0) scale(1) rotate(0deg);
     pointer-events: none;
@@ -191,6 +205,7 @@ Can be px or %, but watch for scrollbars appearing when x is over 200%.
 }
 
 .resources li:hover .cards-card-image:nth-child(2) > picture:last-of-type img {
+    height: unset;
     opacity: 1;
     transform: translate3d(210%, -10%, 0) scale(.9) rotate(20deg);
     pointer-events: none;
