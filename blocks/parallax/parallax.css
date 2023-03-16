@@ -6,11 +6,11 @@ main .parallax-container {
 main .parallax-background {
     overflow: hidden;
     background-color: var(--ticker-color);
-    background-size: 130%;
+    background-size: 120%;
     height: auto;
     padding: 10px;
     background-position-x: center;
-    background-position-y: -200px;
+    background-position-y: -150px;
 }
 
 main .parallax-background > div {
@@ -50,12 +50,9 @@ main .parallax-background p {
 @media (min-width: 1280px) {
     main .parallax-background {
         overflow: hidden;
-        background-size: 110%;
+        background-size: 100%;
         width: 100%;
-        height: auto;
         padding: 20px 0;
-        background-position-x: center;
-        background-position-y: -200px;
     }
 
     main .parallax-background h2 {
