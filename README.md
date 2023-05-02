@@ -6,8 +6,18 @@ https://www.dickssportinggoods.com/s/baseball-softball-services
 
 Some info about how Dick's is using Adobe products : https://business.adobe.com/customer-success-stories/dicks-sporting-goods-case-study.html
 
+## How I planned this demo to be a next-step in learning
+
 This demo project is used by a lot of people since Summit. 
 To play around with the pages in the Sharepoint for the DSG project, please copy the main pages into your own folder under /drafts/yourname.
+
+I built this in mind as a next-step resource, after someone creates a personal boilerplate site.
+- Wrote this readme.md notes for high level of how I approached the project
+- I did all my edits with new branches and pull requess, so learners can view history of changes.
+- Specifically included and utilized a ['fragment' block](https://www.hlx.live/developer/block-collection#block-collection) for learning purposes (my demo is 1 page, normally don't need a fragment for that.)
+- Created a couple other custom blocks (news-ticker, parallax), mostly from copying and modifying what I found in other projects
+- Included a small custom function ["wrapSpanLink" to libs-franklin.js](https://github.com/hlxsites/dsg/blob/main/scripts/lib-franklin.js#L151)  (for features needed when the blocks are first being created)
+- Included a small custom function ["figureImageLink" to scripts.js](https://github.com/hlxsites/dsg/blob/main/scripts/scripts.js#L61)  (for features that could be used in multiple blocks/places)
 
 ## Environments
 - Preview: https://main--dsg--hlxsites.hlx.page/
@@ -20,6 +30,10 @@ npm i
 ```
 
 ## Tests
+A note about the existing/OOTB tests: 
+
+If you edit the DOM structure in your project's header/nav (why wouldn't you?) the test will fail.
+Unless you want to write new block tests based on your new structure, I recommend removing  (or commenting out) the test specifics like I did in the /test/blocks/header/header.test.js here: https://github.com/hlxsites/dsg/pull/43/files#diff-c2173c5cdad4eac89d8cb1eeb9bbe1270c88e2ce3f134783e27ce62b1a895d73 .
 
 ```sh
 npm tst
