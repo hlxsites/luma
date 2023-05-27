@@ -148,7 +148,12 @@ export function decorateIcons(element = document) {
   });
 }
 
-// when a link is immediately following an icon (header and pre-footer), link it.
+/* Charity's custom:
+When a link is immediately following an icon, link it.
+This is in lib-franklin instead of scripts because it needs to happen
+in various blocks, including header.
+*/
+
 export function wrapSpanLink(element = document) {
   element.querySelectorAll('span.icon + a').forEach((a) => {
     if (a.href === a.innerHTML) {

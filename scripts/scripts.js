@@ -58,7 +58,9 @@ export function decorateButtons(element) {
   });
 }
 
-// if an image has a soft return with link under it and a short caption
+/* Charity's custom: if an image has a soft return with link under it and a short caption.
+This could be problematic because it depends on author discipline.
+ */
 function figureImageLink(block) {
   [...block.querySelectorAll('picture + br + a')]
     .filter((a) => a.href === a.textContent)
@@ -95,6 +97,17 @@ function buildAutoBlocks(main) {
   }
 }
 
+/** These things I think could be added to boilerplate;
+ * I want to add to every project going forward. */
+
+/* 1. Add a class so we can remove the spacing that P adds via CSS */
+function decorateOnlyPicture(main) {
+  const onlyPictures = main.querySelectorAll('p > picture:only-child, div > picture:only-child');
+  onlyPictures.forEach((onlyPicture) => {
+    onlyPicture.closest('p, div').classList.add('only-picture');
+  });
+}
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -105,6 +118,7 @@ export function decorateMain(main) {
   decorateButtons(main);
   decorateIcons(main);
   wrapSpanLink(main);
+  decorateOnlyPicture(main); // Charity added
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
@@ -145,7 +159,7 @@ export function addFavIcon(href) {
  */
 async function loadLazy(doc) {
   const main = doc.querySelector('main');
-  loadHeader(doc.querySelector('header')); // Moving per Uncle D.
+  loadHeader(doc.querySelector('header')); // Moving 7 lines up per Uncle D. for faster render
   await loadBlocks(main);
 
   const { hash } = window.location;
