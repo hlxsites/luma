@@ -13,8 +13,8 @@
  :root {
   /* colors */
   --button-hover-color: #ededed;
-  --nav-underline-color: #bb5811;
-  --ticker-color: #006554;
+  --nav-underline-color: red;
+  --ticker-color: #ABBF20;
   --background-color: #fff;
   --overlay-background-color: #eaebeb;
   --highlight-background-color: #f9f9f9;
