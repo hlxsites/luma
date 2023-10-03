@@ -150,19 +150,19 @@ a.button:any-link, button {
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--background-color);
+  background-color: var(--button-hover-color);
   cursor: pointer;
 }
 
 button:disabled, button:disabled:hover {
-  background-color: var(--background-color);
+  background-color: var(--overlay-background-color);
   cursor: unset;
 }
 
 a.button.secondary, button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
-  color: var(--background-color);
+  color: var(--text-color)
 }
 
 
