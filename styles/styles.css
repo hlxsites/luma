@@ -150,12 +150,12 @@ a.button:any-link, button {
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--button-hover-color);
+  background-color: var(--background-color);
   cursor: pointer;
 }
 
 button:disabled, button:disabled:hover {
-  background-color: var(--overlay-background-color);
+  background-color: var(--background-color);
   cursor: unset;
 }
 
