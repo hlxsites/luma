@@ -139,7 +139,7 @@ a.button:any-link, button {
   font-style: normal;
   cursor: pointer;
   color: var(--text-color);
-  background-color: black;
+  background-color: var(--background-color);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
