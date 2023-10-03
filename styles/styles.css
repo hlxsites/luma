@@ -14,7 +14,7 @@
   /* colors */
   --button-hover-color: #ededed;
   --nav-underline-color: #efeb00;
-  --ticker-color: #01972e;
+  --ticker-color: #509246;
   --background-color: #fff;
   --overlay-background-color: #eaebeb;
   --highlight-background-color: #f9f9f9;
@@ -162,7 +162,7 @@ button:disabled, button:disabled:hover {
 a.button.secondary, button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
-  color: var(--text-color)
+  color: var(--background-color)
 }
 
 
