@@ -109,7 +109,9 @@ a:any-link {
 }
 
 a:hover {
+  color: #509246;
   text-decoration: underline;
+  font-size: 18pt;
 }
 
 code, pre, samp {
