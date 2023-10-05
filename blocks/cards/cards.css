@@ -161,7 +161,7 @@
 
 .resources li .cards-card-image:nth-child(1) img {
     height: 176px;
-    width: 176px;
+    width: auto;
     }
 
 /* translate 3d x, y value determines horizontal travel distance.
