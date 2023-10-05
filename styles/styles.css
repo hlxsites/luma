@@ -106,11 +106,10 @@ p, dl, ol, ul, pre, blockquote {
 a:any-link {
   color: var(--text-color);
   text-decoration: none;
-  font-size: 14pt;
 }
 
 a:hover {
-  color: #509246;
+  color: #005aae;
   text-decoration: underline;
 }
 
