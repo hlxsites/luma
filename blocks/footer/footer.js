@@ -1,16 +1,4 @@
-import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
-
-const MQ = window.matchMedia('(min-width: 900px)');
-/**
- * Toggles the links accordion
- * @param {Element} section The container element
- * @param {Boolean} expanded Whether the element should be expanded or collapsed
- */
-function toggleAllDrops(section, expanded = false) {
-  section.querySelectorAll('ul > .links-drop').forEach((drop) => {
-    drop.setAttribute('aria-expanded', expanded);
-  });
-}
+import { decorateIcons } from '../../scripts/lib-franklin.js';
 
 /**
  * loads and decorates the footer
@@ -18,50 +6,23 @@ function toggleAllDrops(section, expanded = false) {
  */
 
 export default async function decorate(block) {
-  const cfg = readBlockConfig(block);
-  block.textContent = '';
+  const navPath = window.wknd.demoConfig.demoBase || '';
 
-  const footerPath = cfg.footer || '/footer';
-  const resp = await fetch(`${footerPath}.plain.html`, window.location.pathname.endsWith('/footer') ? { cache: 'reload' } : {});
-  const html = await resp.text();
+  const resp = await fetch(`${navPath}/footer.plain.html`, window.location.pathname.endsWith('/footer') ? { cache: 'reload' } : {});
+  if (resp.ok) {
+    block.textContent = '';
 
-  const footer = document.createElement('div');
-  footer.innerHTML = html;
+    const html = await resp.text();
+    const footer = document.createElement('div');
+    footer.innerHTML = html;
+    await decorateIcons(footer);
 
-  const classes = ['store-links', 'copyright'];
-  classes.forEach((c, i) => {
-    const section = footer.children[i];
-    if (section) section.classList.add(`footer-${c}`);
-  });
-
-  const dropdowns = footer.querySelectorAll('.footer-store-links');
-  if (dropdowns) {
-    dropdowns.forEach((dropdown) => {
-      dropdown.querySelectorAll(':scope > ul > li').forEach((drop) => {
-        if (drop.querySelector('ul')) {
-          drop.classList.add('links-drop');
-          drop.addEventListener('click', () => {
-            if (!MQ.matches && dropdown.className.includes('store-links')) {
-              const expanded = drop.getAttribute('aria-expanded') === 'true';
-              toggleAllDrops(dropdown);
-              drop.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-            }
-          });
-        }
-      });
-    });
+    const classes = ['brand', 'nav', 'follow', 'disc'];
+    let f = footer.firstElementChild;
+    while (f && classes.length) {
+      f.classList.add(classes.shift());
+      f = f.nextElementSibling;
+    }
+    block.append(footer);
   }
-
-  // rewrap sections
-
-  const storeLinks = footer.querySelector('.footer-store-links');
-  if (storeLinks) {
-    const wrapper = document.createElement('div');
-    wrapper.className = 'links-drop-wrapper';
-    wrapper.append(storeLinks);
-    block.append(wrapper);
-  }
-
-  block.append(footer);
-  decorateIcons(block);
 }
